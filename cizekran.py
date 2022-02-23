@@ -52,7 +52,7 @@ class App(tk.Tk):
         im = ImageGrab.grab(rect)
 
         digit, acc = predict_digit(im)
-        self.label.configure(text= str(digit)+', '+ str(int(acc*100))+'%')
+        self.label.configure(text=f'{str(digit)}, {int(acc*100)}%')
 
     def draw_lines(self, event):
         self.x = event.x
